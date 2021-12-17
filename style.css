@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+}
+
 li {
     list-style: none;
 }
@@ -16,7 +20,7 @@ a {
 
 /* Inizio regole header */
 header {
-    width: calc(100vw - (100vw - 100% - 50px));
+    width: calc(100% - 50px);
     height: 80px;
     position: fixed;
     right: 0;
@@ -33,12 +37,32 @@ header {
 }
 /* Fine regole header */
 
-
 /* Inizio regole aside */
+aside {
+    width: 50px;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: chocolate;
+}
 /* Fine regole aside */
 
 /* Inizio regole main */
+main {
+    width: calc(100% - 50px);
+    height: calc(100vh - 70px);
+    background-color: cyan;
+}
 /* Fine regole main */
 
 /* Inizio regole footer */
+footer {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: darkcyan;
+}
 /* Fine regole footer */
