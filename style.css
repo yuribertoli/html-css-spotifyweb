@@ -102,10 +102,12 @@ main {
 }
     /* Fine barra di navigazione */
 
+    /* Inizio titoli categorie */
 .categories {
     margin-bottom: 10px;
     margin-left: 5%;
 }
+    /* Fine titoli categorie */
 
     /* Inizio artisti */
 main {
@@ -135,7 +137,7 @@ main .container-artists{
     height: 100%;
     object-fit: cover;
 }
-
+    /* Fine artisti */
 /* Fine regole main */
 
 /* Inizio regole footer */
@@ -145,6 +147,36 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: darkcyan;
+}
+
+.left-footer, .right-footer, .buttons-play, .status-track {
+    display: flex;
+    align-items: center;
+}
+
+.left-footer .img-album {
+    width: 11%;
+    height: auto;
+}
+
+.info-artist, .icons-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-play a {
+    padding: 0 10px;
+}
+
+.central-footer {
+    background-color: crimson;
+}
+
+.right-footer {
+    background-color: darkgreen;
 }
 /* Fine regole footer */
