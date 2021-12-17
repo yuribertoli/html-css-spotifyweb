@@ -209,27 +209,30 @@
         <!-- Bottoni traccia in corso -->
         <div class="central-footer">
 
+            <!-- bottoni traccia -->
             <div class="buttons-play">
                 <a href="#"><i class="fas fa-random"></i></a>
                 <a href="#"><i class="fas fa-step-backward"></i></a>
-                <a href="#"><i class="far fa-play-circle"></i></a>
+                <a id="play-circle" href="#"><i class="far fa-play-circle"></i></a>
                 <a href="#"><i class="fas fa-step-forward"></i></a>
                 <a href="#"><i class="fas fa-redo-alt"></i></a>
             </div>
             
+            <!-- barra di stato avanzamento -->
             <div class="status-track">
                 <span>0:25</span>
-                <hr>
+                <input id="track-situation" type="range" id="track" name="track" min="0" max="100">
                 <span>4:35</span>
             </div>
 
         </div>
 
+        <!-- Icone traccia con volume -->
         <div class="right-footer">
             <a href="#"><i class="fas fa-list"></i></a>
             <a href="#"><i class="fas fa-desktop"></i></a>
             <a href="#"><i class="fas fa-volume-up"></i></a>
-            <hr>
+            <input id="volume" type="range" id="vol" name="vol" min="0" max="100">
         </div>
 
     </footer>

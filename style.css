@@ -4,10 +4,12 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     display: flex;
+    background-color: black;
 }
 
 li {
@@ -46,7 +48,6 @@ aside {
     position: relative;
     flex-direction: column;
     align-items: flex-start;
-    background-color: chocolate;
 }
 
 aside div {
@@ -57,7 +58,7 @@ aside div {
 }
 
 aside div a {
-    font-size: 25px;
+    font-size: 1.8rem;
 }
 
 .account-aside {
@@ -77,7 +78,6 @@ main {
     height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
-    background-color: cyan;
 }
 
 .top-main {
@@ -89,14 +89,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 20px 0 5px;
 }
 
 .top-main nav ul li {
-    width: 25%;
-    padding: 0 10px;
+    padding: 0 5px;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 0.7rem;
     white-space: nowrap;
     margin-bottom: 10px;
 }
@@ -150,7 +148,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkcyan;
+    background-color: rgb(53, 53, 53);
 }
 
 .left-footer, .right-footer, .buttons-play, .status-track {
@@ -158,25 +156,72 @@ footer {
     align-items: center;
 }
 
-.left-footer .img-album {
-    width: 11%;
-    height: auto;
-}
-
-.info-artist, .icons-footer {
+.info-artist, .icons-footer, .central-footer {
     display: flex;
     flex-direction: column;
 }
 
-.buttons-play a {
-    padding: 0 10px;
+    /* Inizio left footer */
+.left-footer {
+    height: 100%;
 }
 
+.left-footer .img-album {
+    width: auto;
+    height: 50%;
+    margin: 0 3px;
+}
+
+.info-artist {
+    font-size: 0.55rem;
+}
+
+.info-artist h4, .status-track span {
+    font-size: 0.7rem;
+}
+
+.icons-footer {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.icons-footer a:first-child {
+    margin-bottom: 4px;
+}
+    /* Fine left footer */
+
+    /* Inizio central footer */
 .central-footer {
-    background-color: crimson;
+    align-items: center;
 }
 
-.right-footer {
-    background-color: darkgreen;
+.central-footer div:last-child {
+    margin-top: 7px;
 }
+
+.buttons-play a {
+    padding: 0 7px;
+}
+
+#play-circle {
+    font-size: 1.3rem;
+}
+
+#track-situation {
+    width: 20vw;
+    margin: 0 5px;
+}
+    /* Fine central footer */
+
+    /* Inizio right footer */
+.right-footer a {
+    padding: 0 5px;
+    font-size: 0.7rem;
+}
+
+#volume {
+    width: 10vw;
+    margin-right: 5px;
+}
+    /* Fine right footer */
 /* Fine regole footer */
