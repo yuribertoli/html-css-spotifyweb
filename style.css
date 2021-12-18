@@ -380,7 +380,7 @@ footer {
 @media (min-width: 552px) {
 
     .top-main nav ul li {
-        margin: 0 2%;
+        margin: 0 3%;
     } 
 }
 
@@ -433,9 +433,22 @@ footer {
 }
 
 @media (min-width: 878px) {
-    
+
+    .container-artists {
+        justify-content: flex-start;
+    }
+
+    .artists {
+        width: 23%;
+        margin-left: 10px;
+    }
+
 }
 
 @media (min-width: 1440px) {
+
+    .artists {
+        width: 15%;
+    }
     
 }
