@@ -19,6 +19,17 @@ li {
 a {
     text-decoration: none;
 }
+
+.display-none {
+    display: none;
+}
+
+span.display-none {
+    font-size: 1rem;
+    color: #80848a;
+    transform: scale(1,0.9);
+    margin-left: 10px;
+}
 /* Fine regole generali */
 
 /* Inizio regole header */
@@ -73,21 +84,39 @@ aside div a i {
     color: #d2d2d2;
 }
 
-.account-aside {
+.bottom-zero-aside {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-}
-    /* Inizio playlist nascosta per telefoni */
-.playlists {
-    display: none;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
+    /* Inizio Logo */
+.logo-aside a {
+    font-size: 2.1rem;
+    margin-top: 5px;
+}
+
+.logo-aside a i {
+    color: white;
+}
+
+.logo-aside a span {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 700;
+}
+    /* Fine Logo */
+
+    /* Inizio playlist nascosta per telefoni */
 .playlists h3 {
     text-transform: uppercase;
     font-size: 1rem;
     transform: scale(1,0.9);
+    margin: 15px 0 10px;
 }
 
 .playlists a {
@@ -102,8 +131,7 @@ aside div a i {
     background-color: #80848a;
     font-size: 1.6rem;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 36px;
     line-height: 40px;
     text-align: center;
     vertical-align: sub;
@@ -119,20 +147,25 @@ aside div a i {
 }
     /* Fine playlist nascosta per telefoni */
 
-    /* Inizio Logo */
-.logo-aside a {
-    font-size: 2.1rem;
-    margin-top: 5px;
-}
-
-.logo-aside a i {
-    color: white;
-}
-    /* Fine Logo */
-
     /* Inizio icone account */
 .account-aside a:first-child {
     font-size: 0.9rem;
+}
+
+.account-aside a:first-child span {
+    font-size: 0.8rem;
+}
+
+.account-aside hr {
+    width: 160px;
+    margin: 0 0 10px;
+    color: #80848a;
+    opacity: 0.5;
+}
+
+.account-aside a:last-child span {
+    color: white;
+    font-weight: 700;
 }
     /* Fine icone account */
 /* Fine regole aside */
@@ -163,6 +196,7 @@ main {
     font-size: 0.7rem;
     white-space: nowrap;
     margin-bottom: 10px;
+    margin: 0 3%;
 }
 
 .top-main nav ul li a {
@@ -203,7 +237,7 @@ main .container-artists:last-child {
 } 
 
 .artists {
-    width: 35vw;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,3 +358,70 @@ footer {
     /* Fine right footer */
 /* Fine regole footer */
 
+
+/* ----------------------------------------------
+------------------------------------------------- */
+/* MEDIAQUERY */
+
+@media (min-width: 552px) {
+
+    /* .top-main nav ul li {
+        margin: 0 2%;
+    } */
+}
+
+@media (min-width: 639px) {
+
+    .display-none {
+        display: block;
+    }
+
+    /* Inizio aside */
+    aside {
+        width: 200px;
+        align-items: flex-start;
+    }
+
+    aside div, .bottom-zero-aside {
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    div.bottom-zero-aside {
+        margin-left: 0px;
+    }
+
+    aside div a {
+        display: flex;
+        align-items: center;
+    }
+
+    aside div.icons-aside a {
+        font-size: 1.1rem;
+    }
+
+    div.logo-aside {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-aside a:first-child {
+        margin-left: 7px;
+    }
+    /* Fine aside */
+
+    /* Inizio main */
+    main {
+        width: calc(100% - 200px);
+    }
+    /* Fine main */
+
+}
+
+@media (min-width: 878px) {
+    
+}
+
+@media (min-width: 1440px) {
+    
+}
