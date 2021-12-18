@@ -111,16 +111,20 @@ aside div a i {
 }
     /* Fine Logo */
 
+.icons-aside a span.search {
+    margin-left: 11px;
+}    
+
     /* Inizio playlist nascosta per telefoni */
 .playlists h3 {
     text-transform: uppercase;
     font-size: 1rem;
     transform: scale(1,0.9);
-    margin: 15px 0 10px;
+    margin: 15px 0 5px;
 }
 
 .playlists a {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #80848a;
     transform: scale(1,0.9);
     margin: 10px 0;
@@ -131,8 +135,8 @@ aside div a i {
     background-color: #80848a;
     font-size: 1.6rem;
     display: inline-block;
-    width: 36px;
-    line-height: 40px;
+    width: 32px;
+    line-height: 36px;
     text-align: center;
     vertical-align: sub;
     transform: scale(1);
@@ -144,6 +148,16 @@ aside div a i {
     border: none;
     color: #80848a;
     margin: 5px 0;
+}
+
+.playlists ul li input:hover {
+    cursor: pointer;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;   
 }
     /* Fine playlist nascosta per telefoni */
 
@@ -365,9 +379,9 @@ footer {
 
 @media (min-width: 552px) {
 
-    /* .top-main nav ul li {
+    .top-main nav ul li {
         margin: 0 2%;
-    } */
+    } 
 }
 
 @media (min-width: 639px) {
