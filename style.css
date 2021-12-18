@@ -155,6 +155,10 @@ main {
     overflow-x: hidden;
 }
 
+main .container-artists:last-child {
+    margin-bottom: 20px;
+}
+
 .container-artists{
     width: 95%;
     margin: auto;
