@@ -347,10 +347,6 @@ main .container-artists:last-child {
     100% {transform: rotate(360deg);}
 }
 
-.round-pictures {
-    border-radius: 50%;
-}
-
 .name-album { /* Titoli nome album */
     font-size: 0.7rem;
     transform: scale(1,0.9); 
@@ -632,6 +628,35 @@ footer {
 /* ----------------------------------------------
 ------------------------------------------------- */
 /* MEDIAQUERY WIDTH*/
+@media (max-width: 140px) {
+    .left-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 220px) {
+    .right-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 256px) {
+    i.fa-random, i.fa-redo-alt {
+        display: none;
+    }
+}
+
+@media (max-width: 296px) {
+    i.fa-desktop, .icons-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 310px) {
+    i.fa-list, .left-footer img {
+        display: none;
+    }
+}
 
 @media (min-width: 552px) {
 
