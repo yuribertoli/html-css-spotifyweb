@@ -51,8 +51,8 @@ header .header-button {
     border-radius: 15px;
 }
 
-.header-button:hover {
-    scale: 1.1;
+.header-button:hover a {
+    font-size: 0.8rem;
 }
 
 /* Fine regole header */
@@ -180,7 +180,15 @@ aside div.playlists a:hover i {
 }
 
 .playlists ul li input:hover {
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+.playlists ul li input:hover::placeholder { /* Cambio colore su hover per placeholder */
+    color: white;
+    opacity: 1; /* <--- solo per firefox */
+}
+
+.playlists ul li input:focus { /* Cambio colore testo scritto nell'input */
     color: white;
 }
 
@@ -309,8 +317,8 @@ main .container-artists:last-child {
     bottom: 0;
     font-size: 3rem;
     background-color: rgba(0, 0, 0, 0.8);
-    transition: background-color 3s linear;
-    transition: border-radius 3s linear;
+    transition: background-color 1s linear;
+    transition: border-radius 1s linear;
     cursor: pointer;
     z-index: -1;
 }
@@ -325,21 +333,18 @@ main .container-artists:last-child {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: border-radius 3s linear;
+    transition: border-radius 1s linear;
 }
 
-.img-album:hover img {
+.img-album:hover img { /* Animazione CD */
+    border-radius: 50%;
     animation: spin 10s infinite linear;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes spin {
     0%  {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
-}
-
-.img-album:hover img {
-    border-radius: 50%;
 }
 
 .round-pictures {
@@ -449,7 +454,7 @@ footer {
 }
 
 #play-circle:hover {
-    scale: 1.2;
+    transform: scale(1.4)
 }
 
 #step-forward i {
@@ -742,13 +747,10 @@ footer {
 
 }
 
-@media (max-height: 89px) {
+@media (max-height: 123px) or (max-width: 240px) {
 
     .header-button {
-        scale: 0.5;
-        position: absolute;
-        top: 15px;
-        left: -15%;
+        display: none;
     }
 
 }
