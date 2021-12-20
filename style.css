@@ -432,6 +432,37 @@ footer {
 #play-circle:hover {
     scale: 1.2;
 }
+
+#step-forward i {
+    animation-name: forward;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+@keyframes forward {
+    0% {color: white;}
+    0.01% {color: red;}
+    50% {color: red;}
+    50.01% {color: white;}
+    100% {color: white;}    
+}
+
+#step-backward i {
+    animation-name: backward;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-direction: reverse;
+}
+
+@keyframes backward {
+    0% {color: white;}
+    0.01% {color: red;}
+    50% {color: red;}
+    50.01% {color: white;}
+    100% {color: white;}    
+}
     /* Inizio barra status traccia */
 #track-situation {
     width: 20vw;
@@ -455,7 +486,7 @@ footer {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 @keyframes song {
