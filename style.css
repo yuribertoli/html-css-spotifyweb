@@ -648,6 +648,10 @@ footer {
     .right-footer {
         display: none;
     }
+
+    footer {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 256px) {
@@ -663,7 +667,13 @@ footer {
 }
 
 @media (max-width: 310px) {
-    i.fa-list, .left-footer img {
+    i.fa-list {
+        display: none;
+    }
+}
+
+@media (max-width: 365px) {
+    .left-footer img {
         display: none;
     }
 }
