@@ -1,0 +1,818 @@
+/* Inizio regole generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.display-none {
+    display: none;
+}
+/* Fine regole generali */
+
+/* Inizio regole header */
+header {
+    width: calc(100% - 50px);
+    height: 70px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .header-button {
+    margin-left: calc(100% - 220px);
+}
+
+.header-button a {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+
+.header-button:hover a {
+    font-size: 0.8rem;
+}
+
+/* Fine regole header */
+
+/* Inizio regole aside */
+aside {
+    width: 50px;
+    height: calc(100vh - 70px);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside div a {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+aside div a i {
+    color: #d2d2d2;
+}
+
+aside div a:hover i { /* Hover bianco su icona */
+    color: white;
+}
+
+aside div a:hover span { /* Hover bianco su testo */
+    color: white;
+}
+
+.bottom-zero-aside {
+    padding-top: 10px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+span.display-none {
+    font-size: 1rem;
+    color: #80848a;
+    transform: scale(1,0.9);
+    margin-left: 10px;
+}
+
+    /* Inizio Logo */
+.logo-aside a {
+    font-size: 2.1rem;
+    margin-top: 5px;
+}
+
+.logo-aside a i {
+    color: white;
+}
+
+.logo-aside a span {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 700;
+}
+    /* Fine Logo */
+
+.icons-aside a span.search {
+    margin-left: 11px;
+}    
+
+    /* Inizio playlist nascosta per telefoni */
+.playlists h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    transform: scale(1,0.9);
+    margin: 15px 0 5px;
+}
+
+.playlists a {
+    font-size: 0.9rem;
+    color: #80848a;
+    transform: scale(1,0.9);
+    margin: 10px 0;
+}
+
+.playlists a:hover {
+    color: white;
+}
+
+.playlists a i {
+    color: black;
+    background-color: #80848a;
+    font-size: 1.6rem;
+    display: inline-block;
+    width: 32px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: sub;
+    transform: scale(1);
+    margin-right: 10px;
+}
+
+aside div.playlists a:hover i {
+    background-color: white;
+    color: black;
+}
+
+.playlists ul {
+    overflow-y: auto;
+    height: 30vh;
+}
+
+.playlists ul li input {
+    background-color: transparent;
+    border: none;
+    color: #80848a;
+    margin: 5px 0;
+}
+
+.playlists ul li input:hover {
+    cursor: pointer; 
+}
+
+.playlists ul li input:hover::placeholder { /* Cambio colore su hover per placeholder */
+    color: white;
+    opacity: 1; /* <--- solo per firefox */
+}
+
+.playlists ul li input:focus { /* Cambio colore testo scritto nell'input */
+    color: white;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;   
+}
+    /* Fine playlist nascosta per telefoni */
+
+    /* Inizio icone account */
+.account-aside a:first-child {
+    font-size: 0.9rem;
+}
+
+.account-aside a:first-child span {
+    font-size: 0.8rem;
+}
+
+.account-aside hr {
+    width: 160px;
+    margin: 0 0 10px;
+    color: #80848a;
+    opacity: 0.5;
+}
+
+.account-aside a:last-child span {
+    color: white;
+    font-weight: 700;
+}
+    /* Fine icone account */
+/* Fine regole aside */
+
+/* Inizio regole main */
+main {
+    width: calc(100% - 50px);
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    background-color: #141922;
+}
+
+.top-main {
+    padding: 80px 0 0;
+}
+
+    /* Inizio barra di navigazione */
+.top-main nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-main nav ul li {
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    margin: 0 3%;
+}
+
+.top-main nav ul li a {
+    color: #80848a;
+}
+
+.top-main nav ul li a:hover {
+    color: white;
+}
+    /* Fine barra di navigazione */
+
+    /* Inizio titoli categorie */
+.categories {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    font-size: 1rem;
+    transform: scale(1,0.9); 
+}
+
+.categories .name-artist {
+    margin: 5px 0 0;
+}
+    /* Fine titoli categorie */
+
+    /* Inizio artisti */
+main {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main .container-artists:last-child {
+    margin-bottom: 20px;
+}
+
+.container-artists{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-shrink: 0;
+    overflow-x: hidden;
+} 
+
+.artists {
+    width: calc(50% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    flex-shrink: 0;
+    overflow-x: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.img-album {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.hover-img-album { /* Hover Albums */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 1s linear;
+    transition: border-radius 1s linear;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.img-album:hover .hover-img-album { /* Hover Layer */
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.img-album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: border-radius 1s linear;
+}
+
+.img-album:hover img { /* Animazione CD */
+    border-radius: 50%;
+    animation: spin 10s infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes spin {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.name-album { /* Titoli nome album */
+    font-size: 0.7rem;
+    transform: scale(1,0.9); 
+    margin: 10px 0 3px;
+}
+
+.name-artist { /* Titoli nomi artisti */
+    font-size: 0.65rem;
+    transform: scale(1,0.9); 
+    color: #80848a;
+}
+
+    /* Fine artisti */
+/* Fine regole main */
+
+/* Inizio regole footer */
+footer {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(53, 53, 53);
+}
+
+.left-footer, .right-footer, .buttons-play, .status-track {
+    display: flex;
+    align-items: center;
+}
+
+.info-artist, .icons-footer, .central-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Inizio left footer */
+.left-footer {
+    height: 100%;
+}
+
+.left-footer .img-album {
+    width: auto;
+    height: 50%;
+    margin: 0 0.9vw;
+}
+
+.left-footer .img-album img { /* Animazione CD */
+    border-radius: 50%;
+    animation: spin-footer 20s infinite linear;
+}
+
+@keyframes spin-footer {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.info-artist {
+    font-size: 0.55rem;
+}
+
+.info-artist span {
+    color: #80848a;
+}
+
+.info-artist span:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.info-artist h4, .status-track span {
+    font-size: 0.7rem;
+}
+
+.icons-footer {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.icons-footer a i {
+    color: #80848a;
+}
+
+.icons-footer a i:hover {
+    color: white;
+}
+
+.icons-footer a:first-child {
+    margin-bottom: 4px;
+}
+    /* Fine left footer */
+
+    /* Inizio central footer */
+.central-footer {
+    align-items: center;
+}
+
+.central-footer div:last-child {
+    margin-top: 7px;
+}
+
+.buttons-play a {
+    padding: 0 7px;
+}
+
+#play-circle {
+    font-size: 1.3rem;
+}
+
+#play-circle:hover {
+    transform: scale(1.4)
+}
+
+#step-forward i {
+    animation-name: forward;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+}
+
+@keyframes forward {
+    0% {color: white;}
+    0.01% {color: red;}
+    50% {color: red;}
+    50.01% {color: white;}
+    100% {color: white;}    
+}
+
+#step-backward i {
+    animation-name: backward;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+@keyframes backward {
+    0% {color: white;}
+    0.01% {color: red;}
+    50% {color: red;}
+    50.01% {color: white;}
+    100% {color: white;}    
+}
+    /* Inizio barra status traccia */
+#track-situation {
+    width: 20vw;
+    margin: 0 5px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#track-situation .track-played {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    height: 5px;
+    width: 5vw;
+    border-radius: 5px;
+    background-color: lightgray;
+    animation-name: song;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+@keyframes song {
+    from {width: 3%;}
+    to {width: 100%;}
+}
+
+#track-situation:hover .track-played {
+    background-color: yellowgreen;
+}
+
+#track-situation .round-status {
+    display: none;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#track-situation:hover .round-status {
+    display: block;
+}
+
+    /* Secondi che passano */
+#zero::after {
+    font: 0.7rem;
+    content: "0";
+    animation: zero 10s linear infinite alternate;
+}
+    
+@keyframes zero {
+    0% {content: "0";}
+    10% {content: "0";}
+    20% {content: "0";}
+    30% {content: "0";}
+    40% {content: "0";}
+    50% {content: "0";}
+    60% {content: "0";}
+    70% {content: "0";}
+    80% {content: "0";}
+    90% {content: "0";}
+    100% {content: none;}
+}  
+
+#counting-numbers::after {
+    font: 0.7rem;
+    content: counter(count);
+    animation: counter 10s linear infinite alternate;
+}
+  
+@keyframes counter {
+    0% {counter-increment: count 0;}
+    10% {counter-increment: count 1;}
+    20% {counter-increment: count 2;}
+    30% {counter-increment: count 3;}
+    40% {counter-increment: count 4;}
+    50% {counter-increment: count 5;}
+    60% {counter-increment: count 6;}
+    70% {counter-increment: count 7;}
+    80% {counter-increment: count 8;}
+    90% {counter-increment: count 9;}
+    100% {counter-increment: count 10;}
+}  
+    /* Fine barra status traccia */
+
+    /* Fine central footer */
+
+    /* Inizio right footer */
+.right-footer a {
+    padding: 0 5px;
+    font-size: 0.7rem;
+}
+    
+#volume {
+    width: 10vw;
+    margin-right: 5px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+#volume .track-played {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+#volume:hover .track-played {
+    background-color: yellowgreen;
+}
+
+#volume .round-status {
+    display: none;
+    position: absolute;
+    bottom: -4px;
+    left: 20%;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#volume:hover .round-status {
+    display: block;
+}
+    /* Fine right footer */
+/* Fine regole footer */
+
+
+/* ----------------------------------------------
+------------------------------------------------- */
+/* MEDIAQUERY WIDTH*/
+@media (max-width: 140px) {
+    .left-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 220px) {
+    .right-footer {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 256px) {
+    i.fa-random, i.fa-redo-alt {
+        display: none;
+    }
+}
+
+@media (max-width: 296px) {
+    i.fa-desktop, .icons-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 310px) {
+    i.fa-list {
+        display: none;
+    }
+}
+
+@media (max-width: 365px) {
+    .left-footer img {
+        display: none;
+    }
+}
+
+@media (min-width: 552px) {
+
+    .top-main nav ul li {
+        margin: 0 3%;
+    } 
+
+}
+
+@media (min-width: 639px) {
+
+    .display-none {
+        display: block;
+    }
+
+    /* Inizio header */
+    header {
+        width: calc(100% - 200px);
+    }
+    /* Fine header */
+
+    /* Inizio aside */
+    aside {
+        width: 200px;
+        align-items: flex-start;
+    }
+
+    aside div, .bottom-zero-aside {
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+
+    div.bottom-zero-aside {
+        margin-left: 0px;
+    }
+
+    aside div a {
+        display: flex;
+        align-items: center;
+    }
+
+    aside div.icons-aside a {
+        font-size: 1.1rem;
+    }
+
+    div.logo-aside {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .account-aside a:first-child {
+        margin-left: 7px;
+    }
+    /* Fine aside */
+
+    /* Inizio main */
+    main {
+        width: calc(100% - 200px);
+    }
+    /* Fine main */
+
+}
+
+@media (min-width: 878px) {
+
+    .container-artists {
+        justify-content: flex-start;
+    }
+
+    .artists {
+        width: calc(100% / 3 - 30px);
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .artists {
+        width: calc(100% / 4 - 30px);
+    }
+}
+
+@media (min-width: 1285px) {
+    .artists {
+        width: calc(100% / 5 - 30px);
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .artists {
+        width: calc(100% / 6 - 30px);
+    }
+}
+
+/* MEDIAQUERY HEIGHT*/
+
+@media (max-height: 515px) {
+
+    .account-aside a#smile, .account-aside hr {
+        display: none;
+    }
+
+}
+
+@media (max-height: 455px) {
+
+    .bottom-zero-aside {
+        display: none;
+    }
+
+}
+
+@media (max-height: 140px) {
+
+    header {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    main {
+        background-color: black;
+    }
+
+}
+
+@media (max-height: 123px) or (max-width: 240px) {
+
+    .header-button {
+        display: none;
+    }
+
+}
+
+
+
