@@ -308,19 +308,38 @@ main .container-artists:last-child {
     right: 0;
     bottom: 0;
     font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 3s linear;
+    transition: border-radius 3s linear;
     cursor: pointer;
     z-index: -1;
 }
 
 .img-album:hover .hover-img-album { /* Hover Layer */
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
 }
 
 .img-album img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: border-radius 3s linear;
+}
+
+.img-album:hover img {
+    animation: spin 10s infinite linear;
+    animation-delay: 3s;
+}
+
+@keyframes spin {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.img-album:hover img {
+    border-radius: 50%;
 }
 
 .round-pictures {
@@ -437,7 +456,7 @@ footer {
     animation-name: forward;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 10s;
+    animation-duration: 20s;
 }
 
 @keyframes forward {
@@ -452,7 +471,7 @@ footer {
     animation-name: backward;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-direction: reverse;
 }
 
@@ -486,7 +505,7 @@ footer {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-    animation-duration: 5s;
+    animation-duration: 10s;
 }
 
 @keyframes song {
@@ -517,7 +536,7 @@ footer {
 #zero::after {
     font: 0.7rem;
     content: "0";
-    animation: zero 5s linear infinite alternate;
+    animation: zero 10s linear infinite alternate;
 }
     
 @keyframes zero {
@@ -537,7 +556,7 @@ footer {
 #counting-numbers::after {
     font: 0.7rem;
     content: counter(count);
-    animation: counter 5s linear infinite alternate;
+    animation: counter 10s linear infinite alternate;
 }
   
 @keyframes counter {
