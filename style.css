@@ -82,7 +82,11 @@ aside div a i {
     color: #d2d2d2;
 }
 
-aside div a i:hover {
+aside div a:hover i { /* Hover bianco su icona */
+    color: white;
+}
+
+aside div a:hover span { /* Hover bianco su testo */
     color: white;
 }
 
@@ -103,10 +107,6 @@ span.display-none {
     color: #80848a;
     transform: scale(1,0.9);
     margin-left: 10px;
-}
-
-span.display-none:hover {
-    color: white;
 }
 
     /* Inizio Logo */
@@ -162,9 +162,14 @@ span.display-none:hover {
     margin-right: 10px;
 }
 
-.playlists a i:hover {
+aside div.playlists a i:hover {
     color: black;
     background-color: white;
+}
+
+aside div.playlists a:hover i {
+    background-color: white;
+    color: black;
 }
 
 .playlists ul {
