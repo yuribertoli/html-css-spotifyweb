@@ -23,13 +23,6 @@ a {
 .display-none {
     display: none;
 }
-
-span.display-none {
-    font-size: 1rem;
-    color: #80848a;
-    transform: scale(1,0.9);
-    margin-left: 10px;
-}
 /* Fine regole generali */
 
 /* Inizio regole header */
@@ -56,6 +49,10 @@ header .header-button {
     padding: 10px 30px;
     border: 1.5px solid white;
     border-radius: 15px;
+}
+
+.header-button:hover {
+    scale: 1.1;
 }
 
 /* Fine regole header */
@@ -85,6 +82,10 @@ aside div a i {
     color: #d2d2d2;
 }
 
+aside div a i:hover {
+    color: white;
+}
+
 .bottom-zero-aside {
     padding-top: 10px;
     background-color: black;
@@ -95,6 +96,17 @@ aside div a i {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+span.display-none {
+    font-size: 1rem;
+    color: #80848a;
+    transform: scale(1,0.9);
+    margin-left: 10px;
+}
+
+span.display-none:hover {
+    color: white;
 }
 
     /* Inizio Logo */
@@ -133,6 +145,10 @@ aside div a i {
     margin: 10px 0;
 }
 
+.playlists a:hover {
+    color: white;
+}
+
 .playlists a i {
     color: black;
     background-color: #80848a;
@@ -144,6 +160,11 @@ aside div a i {
     vertical-align: sub;
     transform: scale(1);
     margin-right: 10px;
+}
+
+.playlists a i:hover {
+    color: black;
+    background-color: white;
 }
 
 .playlists ul {
@@ -160,6 +181,7 @@ aside div a i {
 
 .playlists ul li input:hover {
     cursor: pointer;
+    color: white;
 }
 
 input[type=text]:focus {
@@ -224,14 +246,18 @@ main {
 .top-main nav ul li a {
     color: #80848a;
 }
+
+.top-main nav ul li a:hover {
+    color: white;
+}
     /* Fine barra di navigazione */
 
     /* Inizio titoli categorie */
 .categories {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     margin-left: 5%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transform: scale(1,0.9); 
 }
 
@@ -269,6 +295,26 @@ main .container-artists:last-child {
 .img-album {
     width: 100%;
     height: auto;
+    position: relative;
+}
+
+.hover-img-album { /* Hover Albums */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: -1;
+}
+
+.img-album:hover .hover-img-album {
+    z-index: 2;
 }
 
 .img-album img {
@@ -330,6 +376,16 @@ footer {
     font-size: 0.55rem;
 }
 
+.info-artist span {
+    color: #80848a;
+}
+
+.info-artist span:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .info-artist h4, .status-track span {
     font-size: 0.7rem;
 }
@@ -337,6 +393,14 @@ footer {
 .icons-footer {
     font-size: 0.8rem;
     margin-left: 10px;
+}
+
+.icons-footer a i {
+    color: #80848a;
+}
+
+.icons-footer a i:hover {
+    color: white;
 }
 
 .icons-footer a:first-child {
@@ -359,6 +423,10 @@ footer {
 
 #play-circle {
     font-size: 1.3rem;
+}
+
+#play-circle:hover {
+    scale: 1.2;
 }
 
 #track-situation {
@@ -390,6 +458,7 @@ footer {
     .top-main nav ul li {
         margin: 0 3%;
     } 
+
 }
 
 @media (min-width: 639px) {
@@ -398,9 +467,11 @@ footer {
         display: block;
     }
 
+    /* Inizio header */
     header {
         width: calc(100% - 200px);
     }
+    /* Fine header */
 
     /* Inizio aside */
     aside {
@@ -460,7 +531,7 @@ footer {
 @media (min-width: 1440px) {
 
     .artists {
-        width: 15%;
+        width: 14.5%;
         margin-left: 20px;
     }
 
