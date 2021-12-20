@@ -490,7 +490,7 @@ footer {
 }
 
 @keyframes song {
-    from {width: 30%;}
+    from {width: 3%;}
     to {width: 100%;}
 }
 
@@ -512,6 +512,47 @@ footer {
 #track-situation:hover .round-status {
     display: block;
 }
+
+    /* Secondi che passano */
+#zero::after {
+    font: 0.7rem;
+    content: "0";
+    animation: zero 5s linear infinite alternate;
+}
+    
+@keyframes zero {
+    0% {content: "0";}
+    10% {content: "0";}
+    20% {content: "0";}
+    30% {content: "0";}
+    40% {content: "0";}
+    50% {content: "0";}
+    60% {content: "0";}
+    70% {content: "0";}
+    80% {content: "0";}
+    90% {content: "0";}
+    100% {content: none;}
+}  
+
+#counting-numbers::after {
+    font: 0.7rem;
+    content: counter(count);
+    animation: counter 5s linear infinite alternate;
+}
+  
+@keyframes counter {
+    0% {counter-increment: count 0;}
+    10% {counter-increment: count 1;}
+    20% {counter-increment: count 2;}
+    30% {counter-increment: count 3;}
+    40% {counter-increment: count 4;}
+    50% {counter-increment: count 5;}
+    60% {counter-increment: count 6;}
+    70% {counter-increment: count 7;}
+    80% {counter-increment: count 8;}
+    90% {counter-increment: count 9;}
+    100% {counter-increment: count 10;}
+}  
     /* Fine barra status traccia */
 
     /* Fine central footer */
