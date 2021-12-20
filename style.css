@@ -439,17 +439,28 @@ footer {
     height: 5px;
     background-color: gray;
     border-radius: 5px;
-    position: relative;
+    cursor: pointer;
 }
 
 #track-situation .track-played {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 0;
     left: 0;
-    height: 100%;
-    width: 30%;
+    margin-top: 0;
+    height: 5px;
+    width: 5vw;
     border-radius: 5px;
     background-color: lightgray;
+    animation-name: song;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+@keyframes song {
+    from {width: 30%;}
+    to {width: 100%;}
 }
 
 #track-situation:hover .track-played {
@@ -460,7 +471,7 @@ footer {
     display: none;
     position: absolute;
     bottom: -4px;
-    left: 27%;
+    right: 0;
     height: 13px;
     width: 13px;
     border-radius: 50%;
@@ -487,6 +498,7 @@ footer {
     background-color: gray;
     border-radius: 5px;
     position: relative;
+    cursor: pointer;
 }
 
 #volume .track-played {
@@ -507,7 +519,7 @@ footer {
     display: none;
     position: absolute;
     bottom: -4px;
-    left: 27%;
+    left: 20%;
     height: 13px;
     width: 13px;
     border-radius: 50%;
