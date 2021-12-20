@@ -396,6 +396,16 @@ footer {
     margin: 0 0.9vw;
 }
 
+.left-footer .img-album img { /* Animazione CD */
+    border-radius: 50%;
+    animation: spin-footer 20s infinite linear;
+}
+
+@keyframes spin-footer {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 .info-artist {
     font-size: 0.55rem;
 }
