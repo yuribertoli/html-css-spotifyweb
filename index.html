@@ -303,7 +303,10 @@
             <!-- barra di stato avanzamento -->
             <div class="status-track">
                 <span>0:25</span>
-                <input id="track-situation" type="range" name="track" min="0" max="100">
+                <div id="track-situation">
+                    <div class="track-played"></div>
+                    <div class="round-status"></div>
+                </div>
                 <span>4:35</span>
             </div>
 
@@ -314,7 +317,10 @@
             <a href="#"><i class="fas fa-list"></i></a>
             <a href="#"><i class="fas fa-desktop"></i></a>
             <a href="#"><i class="fas fa-volume-up"></i></a>
-            <input id="volume" type="range" name="vol" min="0" max="100">
+            <div id="volume">
+                <div class="track-played"></div>
+                <div class="round-status"></div>
+            </div>
         </div>
 
     </footer>

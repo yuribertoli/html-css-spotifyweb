@@ -432,11 +432,46 @@ footer {
 #play-circle:hover {
     scale: 1.2;
 }
-
+    /* Inizio barra status traccia */
 #track-situation {
     width: 20vw;
     margin: 0 5px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    position: relative;
 }
+
+#track-situation .track-played {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+#track-situation:hover .track-played {
+    background-color: yellowgreen;
+}
+
+#track-situation .round-status {
+    display: none;
+    position: absolute;
+    bottom: -4px;
+    left: 27%;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#track-situation:hover .round-status {
+    display: block;
+}
+    /* Fine barra status traccia */
+
     /* Fine central footer */
 
     /* Inizio right footer */
@@ -444,10 +479,43 @@ footer {
     padding: 0 5px;
     font-size: 0.7rem;
 }
-
+    
 #volume {
     width: 10vw;
     margin-right: 5px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    position: relative;
+}
+
+#volume .track-played {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+#volume:hover .track-played {
+    background-color: yellowgreen;
+}
+
+#volume .round-status {
+    display: none;
+    position: absolute;
+    bottom: -4px;
+    left: 27%;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#volume:hover .round-status {
+    display: block;
 }
     /* Fine right footer */
 /* Fine regole footer */
