@@ -130,6 +130,15 @@ span.display-none {
     margin-left: 11px;
 }    
 
+aside div.icons-aside a {
+    border-left: 3px solid transparent;
+    padding-left: 6px;
+}
+
+aside div.icons-aside a:first-child {
+    border-left: 3px solid yellowgreen;
+}
+
     /* Inizio playlist nascosta per telefoni */
 .playlists h3 {
     text-transform: uppercase;
@@ -249,6 +258,17 @@ main {
     white-space: nowrap;
     margin-bottom: 10px;
     margin: 0 3%;
+    position: relative;
+}
+
+.top-main nav ul li:first-child::after {
+    /* box-shadow: inset 0px -2px 0px 0px greenyellow; */ /* al 100% width */
+    content: "";
+    position: absolute;
+    width: 50%;
+    bottom: -4px;
+    left: 25%;
+    border-bottom: 2px solid greenyellow;
 }
 
 .top-main nav ul li a {
