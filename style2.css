@@ -711,6 +711,12 @@ footer {
     }
 }
 
+@media (max-width: 454px) {
+    .top-main nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
 @media (min-width: 552px) {
 
     .top-main nav ul li {
