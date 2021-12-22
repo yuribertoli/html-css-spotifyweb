@@ -677,7 +677,17 @@ footer {
     }
 }
 
+@media (max-width: 203px) {
+    .categories {
+        margin-top: 10px;
+    }
+}
+
 @media (max-width: 220px) {
+    .artists {
+        width: 90%;
+    }
+
     .right-footer {
         display: none;
     }

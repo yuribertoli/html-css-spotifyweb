@@ -669,6 +669,12 @@ footer {
     }
 }
 
+@media (max-width: 203px) {
+    .categories {
+        margin-top: 10px;
+    }
+}
+
 @media (max-width: 220px) {
     .right-footer {
         display: none;
